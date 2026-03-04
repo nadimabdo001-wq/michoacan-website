@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="description" content="Michoacán A Pedir de Boca - Authentic Mexican ice cream shop in Boerne, TX. Discover paletas, mini pancakes, snacks locos & more! Family-friendly & colorful." />
+<title>🍓 Michoacán A Pedir de Boca - Mexican Ice Cream & Desserts</title>
+<link rel="icon" href="logo-favicon.png" />
+<link href="https://fonts.googleapis.com/css2?family=Amatic+SC&family=Montserrat&display=swap" rel="stylesheet" />
+<style>
+  * {
+    box-sizing: border-box;
+  }
+  body, h1, h2, h3, p, ul {
+    margin: 0;
+    padding: 0;
+  }
+  body {
+    font-family: 'Montserrat', sans-serif;
+    background: #fff;
+    color: #333;
+  }
+  a {
+    color: #ff4081;
+    text-decoration: none;
+  }
+  a:hover {
+    text-decoration: underline;
+  }
+  img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 3px solid #ff4081;
+    padding: 1rem 2rem;
+    position: sticky;
+    top: 0;
+    background: white;
+    z-index: 1000;
+  }
+  header img {
+    height: 60px;
+  }
+  nav a {
+    font-family: 'Amatic SC', cursive;
+    font-weight: 700;
+    font-size: 1.3rem;
+    margin-left: 2rem;
+    color: #ff4081;
+    transition: color 0.3s ease;
+  }
+  nav a:hover {
+    color: #e91e63;
+  }
+  .hero {
+    background: url('hero-icecream.jpg') no-repeat center center/cover;
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 1rem;
+    color: #ff4081;
+    text-shadow: 2px 2px 5px #fff;
+    text-align: center;
+  }
+  .hero h1 {
+    font-family: 'Amatic SC', cursive;
+    font-size: 4rem;
+    margin-bottom: 0.25rem;
+  }
+  .hero p {
+    font-weight: 600;
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+  }
+  .cta-buttons button {
+    background-color: #ff4081;
+    border: none;
+    padding: 1rem 2.5rem;
+    font-family: 'Amatic SC', cursive;
+    font-size: 1.5rem;
+    border-radius: 30px;
+    color: white;
+    cursor: pointer;
+    margin: 0 1rem;
+    transition: background-color 0.3s ease;
+  }
+  .cta-buttons button:hover {
+    background-color: #e91e63;
+  }
+  section {
+    max-width: 1200px;
+    margin: 3rem auto;
+    padding: 0 1rem;
+  }
+  h2 {
+    text-align: center;
+    font-family: 'Amatic SC', cursive;
+    font-size: 2.8rem;
+    color: #ff4081;
+    margin-bottom: 1.5rem;
+  }
+  .about p {
+    max-width: 700px;
+    margin: 0 auto;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #555;
+  }
+  .menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2.5rem;
+  }
+  .menu-item {
+    background: #fff0f5;
+    padding: 1.6rem;
+    border-radius: 15px;
+    box-shadow: 2px 2px 8px rgba(255,64,129,0.25);
+    transition: transform 0.3s ease;
+  }
+  .menu-item:hover {
+    transform: translateY(-5px);
+  }
+  .menu-item h3 {
+    font-family: 'Amatic SC', cursive;
+    font-size: 2rem;
+    color: #ff4081;
+    margin-bottom: 1rem;
+  }
+  .menu-item ul {
+    list-style: none;
+    color: #333;
+    font-size: 1.1rem;
+    line-height: 1.5;
+  }
+  .menu-item ul li {
+    margin-bottom: 0.55rem;
+  }
+  .menu-item strong {
+    color: #e91e63;
+  }
+  .menu-link {
+    text-align: center;
+    margin-top: 1rem;
+  }
+  .menu-link a {
+    font-weight: bold;
+    font-size: 1.25rem;
+    color: #ff4081;
+  }
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+  .gallery img {
+    border-radius: 18px;
+    box-shadow: 0 5px 15px rgba(255,64,129,0.4);
+    cursor: pointer;
+    transition: transform 0.25s ease;
+    object-fit: cover;
+    aspect-ratio: 1/1;
+  }
+  .gallery img:hover {
+    transform: scale(1.05);
+  }
+  .location {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 1rem;
+  }
+  .location a {
+    font-weight: bold;
+  }
+  iframe {
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(255,64,129,0.3);
+    margin-top: 1rem;
+  }
+  #contact p {
+    text-align: center;
+    font-size: 1.2rem;
+    margin: 0.5rem 0;
+  }
+  footer {
+    text-align: center;
+    padding: 1.5rem;
+    background: #fff0f5;
+    color: #ff4081;
+    font-family: 'Amatic SC', cursive;
+    font-weight: 600;
+    margin-top: 3rem;
+  }
+  @media (max-width: 600px) {
+    .hero h1 {
+      font-size: 2.8rem;
+    }
+    .hero p {
+      font-size: 1.3rem;
+    }
+    nav a {
+      font-size: 1.1rem;
+      margin-left: 1rem;
+    }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <img src="michoacan-logo.png" alt="Michoacán A Pedir de Boca Logo" />
+  <nav>
+    <a href="#about">About</a>
+    <a href="#menu">Menu</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#location">Location</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<section class="hero" role="banner" aria-label="Michoacán A Pedir de Boca ice cream shop introduction">
+  <h1>🍓 Michoacán A Pedir de Boca</h1>
+  <p>Antojitos que enamoran.</p>
+  <div class="cta-buttons">
+    <button onclick="document.getElementById('menu').scrollIntoView({behavior:'smooth'});">View Menu</button>
+    <button onclick="window.open('https://facebook.com/boernemichoacana', '_blank')">Order Online</button>
+  </div>
+</section>
+
+<section id="about" class="about" aria-label="About Michoacán ice cream shop">
+  <h2>Our Story</h2>
+  <p>Michoacán A Pedir de Boca was born from the dream of bringing the authentic flavors of Mexico to our community. Every product is prepared using traditional recipes and made with love.</p>
+</section>
+
+<section id="menu" aria-label="Menu section of Michoacán ice cream and snacks">
+  <h2>Our Menu</h2>
+  <div class="menu-grid">
+
+    <article class="menu-item" aria-labelledby="paletas-title">
+      <h3 id="paletas-title">🍓 Paletas</h3>
+      <ul>
+        <li><strong>Gourmet Paletas</strong> - $3.99 each:</li>
+        <li>Strawberries & Cream, Pistachio, Nuts, Snickers, Strawberry Kiwi, Cheesecake, Kit-Kat, Gansito, Ferrero Rocher, Butter Pecan, Strawberry Lechera (Water Based), Strawberry Filled w/ Chocolate (Milk Based)</li>
+        <li><strong>Milk Based</strong>:</li>
+        <li>Strawberry, Almond, Cookie Monster, Fruity Pebbles, Horchata, Coconut, Caramel, Blue Gum, Choco-chip, Oreo, Coffee, Chocolate, Avocado, Mexican Hot Chocolate, Vanilla, Cotton Candy, Eggnog, Guava, Banana</li>
+        <li><strong>Water Based</strong>:</li>
+        <li>Mango, Mango w/ Chamoy, Mango w/ Chili, Cucumber, Cucumber w/ Chili, Strawberry, Strawberry Kiwi, Chamoy, Watermelon, Watermelon w/ Chili, Hibiscus, Kiwi, Tamarind, Lime, Lime w/ Chili, Lime w/ Chamoy, Pineapple, Pineapple w/ Chili, Pineapple w/ Chamoy, Cantaloupe</li>
+      </ul>
+    </article>
+
+    <article class="menu-item" aria-labelledby="mini-pancakes-title">
+      <h3 id="mini-pancakes-title">Mini Pancakes</h3>
+      <ul>
+        <li>15 Mini Pancakes (2 toppings included) - $9</li>
+        <li>25 Mini Pancakes (3 toppings included) - $13</li>
+        <li>50 Mini Pancakes (4 toppings included) - $23</li>
+      </ul>
+      <p><strong>Drizzles & Toppings</strong>: Nutella, Condensed Milk, Cajeta, Caramel, Chocolate Syrup, Strawberry Jelly, Whipped Cream, Fruity Pebbles, Cocoa Pebbles, Chocolate Chips, Cinnamon Toast Crunch, M&M's, Sprinkles, Mazapan, Marshmallows, Coconut Flakes</p>
+      <p><strong>Special Toppings</strong>: Strawberries, Bananas, Pecans (+$1.50 each)</p>
+    </article>
+
+    <article class="menu-item" aria-labelledby="escamocha-title">
+      <h3 id="escamocha-title">🍧 Fruit Drinks & Snacks</h3>
+      <ul>
+        <li><strong>Escamocha:</strong></li>
+        <ul>
+          <li>Small (12 oz) - $6.00</li>
+          <li>Medium (16 oz) - $7.00</li>
+          <li>Large (20 oz) - $8.00</li>
+        </ul>
+        <li><strong>Fruit Cocktail:</strong></li>
+        <ul>
+          <li>Small (20 oz) - $5.99</li>
+          <li>Medium (24 oz) - $6.99</li>
+          <li>Large (32 oz) - $7.99</li>
+        </ul>
+        <li><strong>Mangonadas:</strong></li>
+        <ul>
+          <li>Small - $5.99</li>
+          <li>Medium - $7.99</li>
+          <li>Large - $9.99</li>
+        </ul>
+        <li><strong>Bionicos:</strong></li>
+        <ul>
+          <li>Medium - $7.25</li>
+          <li>Large - $9.15</li>
+        </ul>
+      </ul>
+    </article>
+
+    <article class="menu-item" aria-labelledby="snacks-locos-title">
+      <h3 id="snacks-locos-title">Snacks Locos</h3>
+      <ul>
+        <li>Pirás Locas — $14.99</li>
+        <li>Sandías Locas — $17.99</li>
+        <li>Pepinos Locos — $9.99</li>
+        <li>Paleta Loca — $6.45</li>
+      </ul>
+    </article>
+
+    <article class="menu-item" aria-labelledby="chips-snacks-title">
+      <h3 id="chips-snacks-title">Chips & More</h3>
+      <ul>
+        <li>Dorilocos / Tostilocos — $7.15</li>
+        <li>Hot Cheetos with Cheese — $5.75</li>
+        <li>Nachos with Cheese — $5.75</li>
+        <li>Tostiesquites — $6.99</li>
+        <li>Corns & Esquites:</li>
+        <ul>
+          <li>Corna — $4.15</li>
+          <li>Esquites Small — $4.75</li>
+          <li>Esquites Large — $5.75</li>
+          <li>With Hot Cheetos — +$0.50</li>
+        </ul>
+      </ul>
+    </article>
+
+  </div>
+  <div class="menu-link">
+    <a href="full-menu.pdf" target="_blank" rel="noopener">Download Full Menu (PDF)</a>
+  </div>
+</section>
+
+<section id="gallery" aria-label="Gallery of desserts and ice cream creations">
+  <h2>Photo Gallery</h2>
+  <div class="gallery">
+    <img src="gallery-bananapf.jpg" alt="Banana split with ice cream, whipped cream, chocolate drizzle and cherries with Michoacán logo background" />
+    <img src="gallery-marshmallow-paleta.jpg" alt="Ice cream paleta covered with marshmallows and caramel drizzle" />
+    <img src="gallery-nachos.jpg" alt="Tostitos and Hot Cheetos nachos drizzled with cheese under bright pink background" />
+    <img src="gallery-dessert-waffle.jpg" alt="Ice cream in a crispy waffle cone topped with Oreos, chocolate sprinkles and wafer sticks" />
+    <img src="gallery-ice-cream-cup.jpg" alt="Ice cream dessert cup with Michoacán logo sticker and granola topping" />
+    <img src="gallery-popsicle-smores.jpg" alt="S’mores flavored paleta with marshmallows under chocolate drizzle" />
+  </div>
+</section>
+
+<section id="location" class="location" aria-label="Location and hours">
+  <h2>Visit Us</h2>
+  <p>109 Waterview Pkwy, Unit 102, Boerne, TX 78006, United States</p>
+  <p>Phone: <a href="tel:+18303314073">+1 (830) 331-4073</a></p>
+  <p><strong>Hours:</strong></p>
+  <ul style="list-style:none; padding:0; max-width: 300px; margin: 0 auto;">
+    <li>Sunday: Closed</li>
+    <li>Monday - Thursday: 11:30 AM - 8:00 PM</li>
+    <li>Friday - Saturday: 11:30 AM - 9:00 PM</li>
+  </ul>
+  <iframe src="https://maps.google.com/maps?q=109%20Waterview%20Pkwy%20Unit%20102%20Boerne%20TX&t=&z=15&ie=UTF8&iwloc=&output=embed" width="100%" height="260" style="border:0; border-radius:15px; margin-top:1rem;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" aria-label="Google map showing Michoacán A Pedir de Boca location"></iframe>
+</section>
+
+<section id="contact" aria-label="Contact and social media">
+  <h2>Connect With Us</h2>
+  <p>Follow us on <a href="https://facebook.com/boernemichoacana" target="_blank" rel="noopener">Facebook</a> &amp; <a href="https://instagram.com/boernemichoacana" target="_blank" rel="noopener">Instagram</a></p>
+  <p>Payment Accepted: Apple Pay &amp; Contactless Payments</p>
+  <p>Parking validated and Free Wi-Fi available onsite.</p>
+</section>
+
+<footer>
+  <p>© 2024 Michoacán A Pedir de Boca. All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>
